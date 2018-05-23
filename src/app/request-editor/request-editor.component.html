@@ -1,0 +1,16 @@
+<form [formGroup]="form" (ngSubmit)="makeRequest()">
+  <div class="form-group">
+    <label for="requestURL">Request URL</label>
+    <input type="email" class="form-control" id="requestURL" placeholder="https://example.com/api/" formControlName="url">
+    <small class="form-text text-muted">The URL to make a post request to.</small>
+  </div>
+  <div *ngIf="error" class="alert alert-danger" role="alert">
+    A simple danger alert—check it out!
+  </div>
+  <div class="form-group">
+    <label for="reqBody">Request Body</label>
+    <div ace-editor id="reqBody" [(text)]="content" mode="json" theme="github" [options]="options" (textChanged)="onChange($event)"></div>
+    <small class="form-text text-muted"><code>'Content-Type':  'application/json'</code> header will be automatically added to the request.</small>
+  </div>
+  <button type="submit" class="btn btn-primary btn-lg btn-submit" [disabled]="form.status !== 'VALID'">Make Request</button>
+</form>

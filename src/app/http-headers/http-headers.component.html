@@ -1,0 +1,32 @@
+<div class="px-3 py-3 pt-md-5 pb-md-4 mx-auto">
+  <h1 class="display-4 text-center">HTTP response headers</h1>
+  <p class="lead text-center">This section lists the HTTP response headers that servers send back for access control requests as defined by the Cross-Origin Resource Sharing specification.</p>
+
+  <h3 class="mt-5">Access-Control-Allow-Origin</h3>
+  <p>A returned resource may have one Access-Control-Allow-Origin header, with the following syntax:</p>
+  <pre>Access-Control-Allow-Origin: &lt;origin&gt; | *</pre>
+  <p>The origin parameter specifies a URI that may access the resource. The browser must enforce this. For requests without credentials, the server may specify "*" as a wildcard, thereby allowing any origin to access the resource.</p>
+
+  <hr />
+
+  <h3>Access-Control-Expose-Headers</h3>
+  <p>The Access-Control-Expose-Headers header lets a server whitelist headers that browsers are allowed to access. For example:</p>
+  <pre>Access-Control-Expose-Headers: X-My-Custom-Header, X-Another-Custom-Header</pre>
+  <p>This allows the X-My-Custom-Header and X-Another-Custom-Header headers to be exposed to the browser.</p>
+
+  <hr />
+
+  <h3>Access-Control-Max-Age</h3>
+  <p>The  Access-Control-Max-Age header indicates how long the results of a preflight request can be cached. For an example of a preflight request, see the above examples.</p>
+  <pre>Access-Control-Max-Age: &lt;delta-seconds&gt;</pre>
+  <p>The delta-seconds parameter indicates the number of seconds the results can be cached.</p>
+
+  <hr>
+
+  <h3>Access-Control-Allow-Credentials</h3>
+  <p>The Access-Control-Allow-Credentials header Indicates whether or not the response to the request can be exposed when the credentials flag is true.  When used as part of a response to a preflight request, this indicates whether or not the actual request can be made using credentials. Note that simple GET requests are not preflighted, and so if a request is made for a resource with credentials, if this header is not returned with the resource, the response is ignored by the browser and not returned to web content.</p>
+  <pre>Access-Control-Allow-Credentials: true</pre>
+
+</div>
+
+
