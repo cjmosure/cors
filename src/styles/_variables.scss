@@ -1,2 +1,16 @@
 // Typography
 $font-size-base: 0.9rem;
+
+// Palette
+$boston-blue: #399EB7;
+$azure: #2F51B4;
+$light-taupe: #B18B67;
+$jordy-blue: #71AADA;
+$dune: #524D4B;
+$geyser: #CCD2D2;
+$bunker: #151415;
+
+// Bootstrap color map (theme-color('primary'))
+$theme-colors: (
+  'primary': $boston-blue
+);

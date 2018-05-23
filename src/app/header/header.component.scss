@@ -1,3 +1,5 @@
+@import '../../styles/bootstrap';
+
 .logo {
   width:40px;
   height:40px;
@@ -5,6 +7,6 @@
 
 nav {
   .active {
-    color: #007bff !important;
+    color: theme-color('primary') !important;
   }
 }
