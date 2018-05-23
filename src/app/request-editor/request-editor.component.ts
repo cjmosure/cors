@@ -73,7 +73,7 @@ export class RequestEditorComponent implements OnInit {
     if (reqBody) {
       this._request.post(this.form.value.url, this.form.value.body).subscribe(
         (res) => {
-          console.log('res', res);
+          // console.log('res', res);
         },
         (err) => {
           console.log(err);
@@ -86,7 +86,7 @@ export class RequestEditorComponent implements OnInit {
    */
   private initFormGroup() {
     this.form = this._fb.group({
-      url: ['http://httpbin.org/post', Validators.required],
+      url: ['https://httpbin.org/post', Validators.required],
       body: [this.content, Validators.required]
     });
   }
